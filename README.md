@@ -6,7 +6,7 @@ you can use the [Advanced Sharer for diaspora*](http://sharetodiaspora.github.io
 
 ## Installation
 
-Copy the files on your public site of your website.
+Copy the files under `php` on the public part of your website.
 
 ## Usage
 
