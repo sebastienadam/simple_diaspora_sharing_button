@@ -2,7 +2,7 @@
 
 The purpose of these scripts is to add a simple sharing button on your
 website for [diaspora*](https://diasporafoundation.org/) social network. If you want a more complex button,
-you can use the [Advanced Sharer for diaspora*](http://sharetodiaspora.github.io/about/).
+you can use the [Advanced Sharer for diaspora*](http://sharetodiaspora.github.io/about/).  There are other options available in [the diaspora* wiki](https://wiki.diasporafoundation.org/Tools_to_use_with_Diaspora) as well.
 
 ## Installation
 
