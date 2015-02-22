@@ -31,7 +31,7 @@
  * @author Sébastien
  */
 class Tr {
-  private $validLanguages = array("en","eo","fr");
+  private $validLanguages = array("en","fr");
   private $defaultLanguage = "en";
   private $lang;
 

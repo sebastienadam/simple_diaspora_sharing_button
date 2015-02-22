@@ -28,5 +28,7 @@
  * Français
  */
 
-$tr["button_go"] = "Sélectionner";
-$tr["share_on_diaspora"] = "Partager sur diaspora*";
+$tr["button_go"] = "Envoyer";
+$tr["input_example"] = "Exemple : joindiaspora.com";
+$tr["introduce_your_pod_URL"]= "Insère l'URL de ton pod";
+$tr["sharing"] = "Partager";
