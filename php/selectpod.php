@@ -28,8 +28,10 @@
 
 include_once './diaspodlist.php';
 include_once './locales/tr.php';
-$pods = getPodsList();
-$shareParams = array();
+$tr = new Tr();
+
+// manage input parameters
+$shareParams = array(); // used to generate parameters for pod sharing page
 if(empty($_GET["url"])) {
   $url = "";
 } else {
@@ -53,8 +55,20 @@ if(empty($_GET["title"])) {
 if(!empty($_GET["notes"])) {
   $shareParams[] = "notes=".urlencode($_GET["notes"]);
 }
-$tr = new Tr();
 $shareParams[] = "jump=doclose";
+
+function print_pods_list() {
+  $pods = getPodsList();
+  $return = "";
+  if(!empty($pods)) {
+    $return .= '<datalist id="podslist">';
+    foreach ($pods as $pod) {
+      $return .= '<option value="'.$pod.'">';
+    }
+    $return .= '</datalist>';
+  }
+  return $return;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -183,10 +197,11 @@ $shareParams[] = "jump=doclose";
       </div>
     </header>
     <section id="podinput">
-      <h3 data-l10n-id="introduce"><?php echo $tr->message("introduce_your_pod_URL"); ?></h3>
+      <h3><?php echo $tr->message("introduce_your_pod_URL"); ?></h3>
       <form onsubmit="share(document.getElementById('podurl').value); return false;">
-        https://<input type="text" id="podurl" placeholder="<?php echo $tr->message("input_example"); ?>" value="" />/&nbsp;&nbsp;&nbsp;<input type="submit" id="podurlsm" value="<?php echo $tr->message("button_go"); ?>" />
+        https://<input type="text" id="podurl" placeholder="<?php echo $tr->message("input_example"); ?>" value="" list="podslist" />/&nbsp;&nbsp;&nbsp;<input type="submit" id="podurlsm" value="<?php echo $tr->message("button_go"); ?>" />
       </form>
+      <?php echo print_pods_list(); ?>
     </section>
   </body>
 </html>
