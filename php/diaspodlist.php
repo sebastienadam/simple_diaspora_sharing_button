@@ -58,7 +58,8 @@ function getPodsList($path_padlist = "podslist.php", $cache_duration = 86400) {
     fwrite($FH, "\$pods = ".var_export($pods, true).";\n");
     fclose($FH);
   }
-  
+  sort($pods);
+
   // return the pods list
   return $pods;
 }
