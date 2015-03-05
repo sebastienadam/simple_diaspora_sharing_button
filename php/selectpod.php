@@ -57,8 +57,9 @@ if(!empty($_GET["notes"])) {
 }
 $shareParams[] = "jump=doclose";
 
-function print_pods_list() {
-  $pods = getPodsList();
+$pods = getPodsList();
+
+function print_pods_list($pods) {
   $return = "";
   if(!empty($pods)) {
     $return .= '<datalist id="podslist">';
@@ -199,9 +200,9 @@ function print_pods_list() {
     <section id="podinput">
       <h3><?php echo $tr->message("introduce_your_pod_URL"); ?></h3>
       <form onsubmit="share(document.getElementById('podurl').value); return false;">
-        https://<input type="text" id="podurl" placeholder="<?php echo $tr->message("input_example"); ?>" value="" list="podslist" />/&nbsp;&nbsp;&nbsp;<input type="submit" id="podurlsm" value="<?php echo $tr->message("button_go"); ?>" />
+        https://<input type="text" id="podurl" placeholder="<?php echo $tr->message("input_example").$pods[array_rand($pods)]; ?>" value="" list="podslist" />/&nbsp;&nbsp;&nbsp;<input type="submit" id="podurlsm" value="<?php echo $tr->message("button_go"); ?>" />
       </form>
-      <?php echo print_pods_list(); ?>
+      <?php echo print_pods_list($pods); ?>
     </section>
   </body>
 </html>

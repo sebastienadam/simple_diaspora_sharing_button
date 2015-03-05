@@ -29,7 +29,7 @@ function getPodsList($path_padlist = "podslist.php", $cache_duration = 86400) {
   if(!file_exists($path_padlist) || !empty($_GET["refresh"])) {
     $reload = TRUE;
   } else {
-    include_once $path_padlist;
+    include $path_padlist;
     if(($last_update + $cache_duration) < time()) {
       $reload = TRUE;
     } else {

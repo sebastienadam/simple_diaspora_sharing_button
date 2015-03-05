@@ -29,7 +29,7 @@
  */
 
 $tr["button_go"] = "Go!";
-$tr["input_example"] = "Example: joindiaspora.com";
+$tr["input_example"] = "Ex: ";
 $tr["introduce_your_pod_URL"]= "Introduce your pod URL";
 $tr["share_on_diaspora"] = "Share on diaspora*";
 $tr["sharing"] = "Share";

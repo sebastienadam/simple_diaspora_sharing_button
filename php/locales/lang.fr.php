@@ -29,7 +29,7 @@
  */
 
 $tr["button_go"] = "Envoyer";
-$tr["input_example"] = "Exemple : joindiaspora.com";
+$tr["input_example"] = "Ex : ";
 $tr["introduce_your_pod_URL"]= "Insère l'URL de ton pod";
 $tr["share_on_diaspora"] = "Partager sur diaspora*";
 $tr["sharing"] = "Partager";
